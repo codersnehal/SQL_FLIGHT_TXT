@@ -209,12 +209,14 @@ SELECT first_name, last_name,
        FLOOR(DATEDIFF(CURDATE(), date_of_birth) / 365.25) AS age
 FROM air_passenger_profile
 WHERE FLOOR(DATEDIFF(CURDATE(), date_of_birth) / 365.25) >= 60;
+
 /*5.Display the booking id having the highest number of passengers*/
 SELECT ticket_id, COUNT(*) AS Passenger_count
 FROM air_ticket_info
 GROUP BY ticket_id
 ORDER BY Passenger_count DESC
 LIMIT 1;
+
 /*6.Display the city name which has the highest number of flights arrving.
 */
 
